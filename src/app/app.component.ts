@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PelisService } from './services/pelis.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pelisApp';
+
+  constructor( public ps:PelisService) {
+    this.ps.getFavorites().subscribe( data => console.log(data) )
+    
+  } 
 }
