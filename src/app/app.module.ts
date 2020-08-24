@@ -5,13 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
-import { ShareComponent } from './components/share/share.component';
+import { SearchComponent } from './components/search/search.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { CardsComponent } from './components/shared/cards/cards.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ShareComponent
+    SearchComponent,
+    NavbarComponent,
+    LoadingComponent,
+    CardsComponent
+    
   ],
   imports: [
     BrowserModule,

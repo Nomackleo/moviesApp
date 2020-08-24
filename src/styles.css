@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary: #0d253f;
+    --primary-a: #141E2A;
+    --primary-b: #021122;
+    --primary-c: #5989BE;
+    --primary-d: #819DBE;
+    --secondaryA: #01b4e4;
+    --secondaryA-a: #338299;
+    --secondaryA-b: #00607B;
+    --secondaryA-c: #52D2F6;
+    --secondaryA-d: #92E0F6;
+    --secondaryB: #111742;
+    --secondaryB-a: #16192D;
+    --secondaryB-b: #030724;
+    --secondaryB-c: #5F6ABF;
+    --secondaryB-d: #858CBF;
+    --complementary: #90cea1;
+    --complementary-a: #6E8A76;
+    --complementary-b: #1A6F31;
+    --complementary-c: #BEEECB;
+    --complementary-d: #D1EED9;
+  
+  }
+  .bg-dark {
+    background-color: var(--primary-a) !important;
+  }
+  .bg-secondary {
+    background-color: var(--secondaryA-b);
+  }
+  .bg-tertiary {
+    background-color: var(--complementary);
+  }
