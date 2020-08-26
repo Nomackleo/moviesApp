@@ -10,7 +10,9 @@ export class AppComponent {
   title = 'pelisApp';
 
   constructor( public ps:PelisService) {
-    this.ps.getFavorites().subscribe( data => console.log(data) )
+    this.ps.getPopularity().subscribe( data => console.log(data) )
     
   } 
+
+
 }

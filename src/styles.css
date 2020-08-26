@@ -22,12 +22,114 @@
     --complementary-d: #D1EED9;
   
   }
+  .bg-primary {
+    background-color: var(--primary) !important;
+  }
   .bg-dark {
     background-color: var(--primary-a) !important;
+  }
+  .bg-dark-a{
+    background-color: #021122;
   }
   .bg-secondary {
     background-color: var(--secondaryA-b);
   }
   .bg-tertiary {
     background-color: var(--complementary);
+  }
+
+  .card-columns .card {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  .card-columns:hover .card {
+    opacity: .5;
+  }
+  .card-columns .card:hover{
+    opacity: 1;
+  }
+  .card-columns .card::before {
+    content: '';
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    background: rgba(255, 255, 255, .1);
+    pointer-events: none;
+  }
+  .card-columns .card .light {
+    transition: .5;
+    opacity: 0;
+  }
+  .card-columns .card:hover .light {
+    opacity: 1;
+  }
+  .card-columns .card .light:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--secondaryA));
+    animation: animate1 2s linear infinite;
+  }
+  @keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  .card-columns .card .light:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, var(--secondaryA));
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+  }
+  @keyframes animate2 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  .card-columns .card .light:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--secondaryA));
+    animation: animate3 2s linear infinite;
+  }
+  @keyframes animate3 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .card-columns .card .light:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, var(--secondaryA));
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+  }
+  @keyframes animate4 {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
   }

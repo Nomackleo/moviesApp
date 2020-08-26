@@ -17,11 +17,18 @@ export class PelisService {
 
   
   getCurrent() {
-    let url = `${ this.urlMoviedb }//discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22&api_key=${ this.apiKey }&callback=test`
-    return this.http.jsonp( url, 'callback' ).pipe(map( res => res ))
+    let from = new Date().toISOString().slice(0, 10)
+    let until = new Date().toISOString().slice(0, 10)
+    
+    let url = `${ this.urlMoviedb }/discover/movie?primary_release_date.gte=${ from }&primary_release_date.lte=${ until }&api_key=${ this.apiKey }&callback=test`
+    return this.http.jsonp( url, 'callback' ).pipe(map( res => res['results'] )) 
   }             
-  getFavorites() {
+  getPopularity() {
     let url = `${ this.urlMoviedb }/discover/movie?sort_by=popularity.desc&api_key=${ this.apiKey }&callback=test`
-    return this.http.jsonp( url, 'callback' ).pipe(map( res => res ))
+    return this.http.jsonp( url, 'callback' ).pipe(map( res => res['results'] ))
+  }
+  getPopKids() {
+    let url = `${ this.urlMoviedb }/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=${ this.apiKey }&callback=test`
+    return this.http.jsonp( url, 'callback' ).pipe(map( res => res['results'] ))
   }
 }

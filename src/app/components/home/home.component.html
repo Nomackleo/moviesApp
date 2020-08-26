@@ -1,23 +1,29 @@
-<div class="container bg-dark p-5">
+<div class="container-fluid bg-dark p-5">
     <img src="../../../assets/img/blue_long_1.svg" alt="The Movie DB" width="auto" height="auto" loading="lazy">
 </div>
-<div class="container">
+<hr>
+<div class="container-fluid m-0 p-5">
     <div class="row m-4 text-left">
         <h1 class="display-4">Current Movies</h1>
         <hr>
+    </div>
+    <div class="row">
+        <app-cards [movies]="currentMovies"></app-cards>
         
     </div>
-    <app-cards></app-cards>
     <div class="row m-4 text-left">
         <h1 class="display-4">Popular Movies</h1>
         <hr>
-        
+    </div> 
+    <div class="row">
+        <app-cards></app-cards>    
     </div>
-    <app-cards></app-cards>
     <div class="row m-4 text-left">
         <h1 class="display-4">Popular Kid's Movies</h1>
         <hr>
-       
     </div>
-     <app-cards></app-cards>
+    <div class="row">
+        <app-cards></app-cards>
+    </div>
+     
 </div>

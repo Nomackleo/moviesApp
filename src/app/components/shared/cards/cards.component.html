@@ -1,12 +1,13 @@
 <div class="card-columns m-5">
-    <div class="card puntero" style="width: 18rem;">
-        <img class="card-img-top" alt="...">
+    <div *ngFor="let movie of movies" class="card bg-dark-a" style="width: 18rem;">
+        <span class="light"></span>
+        <span class="light"></span>
+        <span class="light"></span>
+        <span class="light"></span>
+        <img [src]="movie | imgMovies"  class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Title</h5>
-          <p class="card-text">
-              <span class="badge badge-pill badge-primary">Genres</span>
-          </p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <h5 class="card-title text-white">{{movie.title}}</h5>
+          <p class="card-text"><small class="text-muted">{{movie.release_date}}</small></p>
         </div>
     </div>
 </div>

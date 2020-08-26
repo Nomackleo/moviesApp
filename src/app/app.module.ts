@@ -9,6 +9,7 @@ import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { CardsComponent } from './components/shared/cards/cards.component';
+import { ImgMoviesPipe } from './pipes/img-movies.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CardsComponent } from './components/shared/cards/cards.component';
     SearchComponent,
     NavbarComponent,
     LoadingComponent,
-    CardsComponent
+    CardsComponent,
+    ImgMoviesPipe
     
   ],
   imports: [
