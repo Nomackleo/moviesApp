@@ -10,16 +10,13 @@ export class HomeComponent implements OnInit {
 
   currentMovies: any[] = []
   popularityMovies: any[] = []
+  popKids: any[] = []
 
   constructor( private ps:PelisService ) {
     
-    this.ps.getCurrent().subscribe( (data:any) => {
-      this.currentMovies = data
-      console.log(this.currentMovies);
-    } )
-    /* this.ps.getPopularity().subscribe( (data:any) => {
-      this.popularityMovies = data
-    } ) */
+    this.ps.getCurrent().subscribe( (data:any) => this.currentMovies = data )
+    this.ps.getPopularity().subscribe( (data:any) => this.popularityMovies = data )
+    this.ps.getPopKids().subscribe( (data:any) => this.popKids = data )
    }
 
   ngOnInit(): void {

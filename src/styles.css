@@ -45,7 +45,7 @@
   .card-columns:hover .card {
     opacity: .5;
   }
-  .card-columns .card:hover{
+  .card-columns .card:hover {
     opacity: 1;
   }
   .card-columns .card::before {
@@ -72,14 +72,7 @@
     background: linear-gradient(to right, transparent, var(--secondaryA));
     animation: animate1 2s linear infinite;
   }
-  @keyframes animate1 {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
+  
   .card-columns .card .light:nth-child(2) {
     position: absolute;
     top: 0;
@@ -90,14 +83,7 @@
     animation: animate2 2s linear infinite;
     animation-delay: 1s;
   }
-  @keyframes animate2 {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(100%);
-    }
-  }
+  
   .card-columns .card .light:nth-child(3) {
     position: absolute;
     bottom: 0;
@@ -107,14 +93,7 @@
     background: linear-gradient(to right, transparent, var(--secondaryA));
     animation: animate3 2s linear infinite;
   }
-  @keyframes animate3 {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+  
   .card-columns .card .light:nth-child(4) {
     position: absolute;
     top: 0;
@@ -125,6 +104,30 @@
     animation: animate4 2s linear infinite;
     animation-delay: 1s;
   }
+  @keyframes animate1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @keyframes animate2 {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  @keyframes animate3 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
   @keyframes animate4 {
     0% {
       transform: translateY(100%);
@@ -133,3 +136,66 @@
       transform: translateY(-100%);
     }
   }
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .5s;
+  }
+  .box .percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  .box .percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    
+  }
+  .box .percent svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--complementary);
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    }
+  .box .percent  svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #021122;
+  }  
+  .box .percent  svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 5) / 10);
+    stroke: #1A6F31;
+       
+  }  
+  .box .percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .box .percent .number h3 {
+    font-weight: 700;
+    transition: .5s;
+  }
+  .percent {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background: #021122;
+  }
+  
+  
